@@ -37,6 +37,7 @@ else
   MUTT_EDITOR=vim
 fi
 
+# Load up other .zsh files in the directory
 for file in ~/dotfiles/zsh/*.zsh; do
     . $file
 done
