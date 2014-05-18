@@ -3,7 +3,7 @@
 ######################################################################
 
 # Start tmux when ZSH starts
-if [ "$TMUX" = "" ]; then tmux; fi
+# if [ "$TMUX" = "" ]; then tmux; fi # Not doing this for now
 
 # Enviromental/shell pref stuff up
 
