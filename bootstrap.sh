@@ -8,6 +8,8 @@ fi
 printf "Setting up .zshrc ... "
 ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
 printf "Done\n"
+#chsh -s `which zsh`
+# Requires root access , so commenting it out 
 
 
 if [ -f ~/.vimrc ]; then 
