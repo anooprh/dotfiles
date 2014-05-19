@@ -41,5 +41,8 @@ printf "Done\n"
 
 printf "Setting up terminator preferences"
 mkdir ~/.config/terminator
+if [ -f ~/.config/terminator/config ]; then 
+    rm ~/.config/terminator/config
+fi
 ln -s ~/dotfiles/terminator/config ~/.config/terminator/config
 printf "Done\n"
