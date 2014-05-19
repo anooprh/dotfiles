@@ -11,6 +11,7 @@ After install of arch-linux/ any other linux
 2. Set up git
 
 Set up user name , email
+
 	```shell
 	git config --global user.name "anooprh"
 	git config --global user.email "anoop.hallur@gmail.com"
