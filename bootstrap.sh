@@ -38,3 +38,8 @@ printf "Setting up .tmux.conf ... "
 ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 printf "Done\n"
 
+
+printf "Setting up terminator preferences"
+mkdir ~/.config/terminator
+ln -s ~/dotfiles/terminator/config ~/.config/terminator/config
+printf "Done\n"
