@@ -1,0 +1,74 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, InactivityWatch, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
+  title_transmit_bg_color = "#b00a00"
+  handle_size = 2
+  inactive_color_offset = 0.5
+[keybindings]
+  broadcast_all = <Primary><Shift>x
+  toggle_zoom = <Primary>Return
+  new_window = <Primary><Shift>n
+  split_vert = <Super>d
+  split_horiz = <Shift><Super>d
+[profiles]
+  [[default]]
+    use_system_font = False
+    visible_bell = True
+    background_image = None
+    background_darkness = 0.93
+    urgent_bell = True
+    cursor_shape = ibeam
+    scrollback_lines = 5000000
+    foreground_color = "#ffffff"
+    font = Monospace 17
+    audible_bell = True
+    scrollback_infinite = True
+  [[Projector]]
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    background_color = "#ffffff"
+    background_image = None
+    foreground_color = "#000000"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[MATLAB]]
+    [[[child0]]]
+      position = 121:71
+      type = Window
+      order = 0
+      parent = ""
+      size = 614, 387
+    [[[child1]]]
+      position = 366
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 217
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      group = Tab 0
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      group = Tab 0
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal4]]]
+      profile = default
+      group = Tab 0
+      type = Terminal
+      order = 0
+      parent = child3
+[plugins]
