@@ -10,19 +10,18 @@ After install of arch-linux/ any other linux
 	```
 2. Set up git
 
-~> Set up user name , email
-
+Set up user name , email
 	```shell
-git config --global user.name "anooprh"
-git config --global user.email "anoop.hallur@gmail.com"
+	git config --global user.name "anooprh"
+	git config --global user.email "anoop.hallur@gmail.com"
 	```
 
-~> Generate ssh keys, upload to github
+Generate ssh keys, upload to github
 
 	```shell
-ssh-keygen -t rsa -C "anoop.hallur@gmail.ocm"
-ssh-add ~/.ssh/id_rsa
-xclip -sel clip < ~/.ssh/id_rsa.pub  
+	ssh-keygen -t rsa -C "anoop.hallur@gmail.ocm"
+	ssh-add ~/.ssh/id_rsa
+	xclip -sel clip < ~/.ssh/id_rsa.pub  
 	```
 
 copied to clipboard,  upload this in github, bitbucket, wherever
