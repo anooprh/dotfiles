@@ -5,6 +5,7 @@ After install of arch-linux/ any other linux
 
 1. Install the stuff (requires root access)
 
+
 	sudo pacman -S git gvim tmux zsh xclip terminator unzip wget curl svn bzr    
 
 2. Set up git
@@ -30,6 +31,7 @@ After install of arch-linux/ any other linux
 	sudo chsh -s `which zsh`
 
 4. Set up dotfiles(zshrc, vimrvc, vim, tmux.conf)
+
 
 	cd ~/ && git clone --recursive https://github.com/anooprh/dotfiles && cd dotfiles &&  git submodule init && git submodule update && sh bootstrap.sh
 
