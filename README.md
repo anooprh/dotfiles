@@ -25,7 +25,7 @@ ssh-add ~/.ssh/id_rsa
 xclip -sel clip < ~/.ssh/id_rsa.pub  
 ```
 
-copied to clipboard,  upload this in github, bitbucket, wherever
+copied to clipboard,  upload this in github, bitbucket, wherever.
 When asked for paraphrase, do not enter anything. Just leave it blank.
 
 3. Change default shell to z-shell
