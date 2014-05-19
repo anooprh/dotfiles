@@ -12,18 +12,18 @@ After install of arch-linux/ any other linux
 
 Set up user name , email
 
-	```shell
-	git config --global user.name "anooprh"
-	git config --global user.email "anoop.hallur@gmail.com"
-	```
+```shell
+git config --global user.name "anooprh"
+git config --global user.email "anoop.hallur@gmail.com"
+```
 
 Generate ssh keys, upload to github
 
-	```shell
-	ssh-keygen -t rsa -C "anoop.hallur@gmail.ocm"
-	ssh-add ~/.ssh/id_rsa
-	xclip -sel clip < ~/.ssh/id_rsa.pub  
-	```
+```shell
+ssh-keygen -t rsa -C "anoop.hallur@gmail.ocm"
+ssh-add ~/.ssh/id_rsa
+xclip -sel clip < ~/.ssh/id_rsa.pub  
+```
 
 copied to clipboard,  upload this in github, bitbucket, wherever
 When asked for paraphrase, do not enter anything. Just leave it blank.
