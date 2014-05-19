@@ -8,6 +8,7 @@ After install of arch-linux/ any other linux
 	$ sudo pacman -S git gvim tmux zsh xclip terminator unzip wget curl svn bzr    
 
 2. Set up git
+
 ~> Set up user name , email
 
 	$ git config --global user.name "anooprh"
@@ -20,6 +21,7 @@ After install of arch-linux/ any other linux
 	When asked for paraphrase, do not enter anything. Just leave it blank.
 	
 	$ ssh-add ~/.ssh/id_rsa
+
 	$ xclip -sel clip < ~/.ssh/id_rsa.pub  
 		copied to clipboard,  upload this in github, bitbucket, wherever
 
