@@ -1,7 +1,7 @@
 Anoop's dotfiles
 ========
 
-# Steps
+## Steps
 
 After install of arch-linux/ any other linux
 
