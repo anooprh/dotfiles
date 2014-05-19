@@ -5,9 +5,9 @@ After install of arch-linux/ any other linux
 
 1. Install the stuff (requires root access)
 
-
+	```shell
 	sudo pacman -S git gvim tmux zsh xclip terminator unzip wget curl svn bzr    
-
+	```
 2. Set up git
 
 ~> Set up user name , email
