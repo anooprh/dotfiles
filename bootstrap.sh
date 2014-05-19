@@ -39,7 +39,7 @@ ln -s ~/dotfiles/tmux/tmux.conf ~/.tmux.conf
 printf "Done\n"
 
 
-printf "Setting up terminator preferences"
+printf "Setting up terminator preferences ... "
 if [ -f ~/.config/terminator/config ]; then 
     rm -rf ~/.config/terminator
 fi
