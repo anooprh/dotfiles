@@ -33,7 +33,7 @@ When asked for paraphrase, do not enter anything. Just leave it blank.
 3. Change default shell to z-shell
 
 	```shell
-	sudo chsh -s `which zsh`
+	chsh -s `which zsh`
 	```
 
 4. Set up dotfiles(zshrc, vimrvc, vim, tmux.conf)
