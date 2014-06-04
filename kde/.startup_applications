@@ -1,0 +1,6 @@
+kstart --desktop 1 google-chrome-stable 
+kstart --desktop 1 terminator
+kstart --desktop 2 kmail  
+kstart --desktop 2 kopete 
+kstart --desktop 3 google-chrome-stable --incognito
+

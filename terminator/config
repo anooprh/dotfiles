@@ -19,7 +19,7 @@
     cursor_shape = ibeam
     scrollback_lines = 5000000
     foreground_color = "#ffffff"
-    font = Monospace 17
+    font = Monospace 10
     audible_bell = True
     scrollback_infinite = True
   [[Projector]]

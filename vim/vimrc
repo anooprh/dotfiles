@@ -64,6 +64,7 @@ map <silent> <F10> :set nospell!<cr>:set nospell?<cr>
 :set laststatus=2
 :set relativenumber
 :set title                " change the terminal's title
+:set pastetoggle=<F2>    " Toggle paste mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Searching / Moving Related
 "nnoremap / /\v

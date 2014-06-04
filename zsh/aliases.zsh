@@ -68,14 +68,14 @@ alias mvim='nocorrect mvim'
 
 alias ll="ls -al"
 alias ls="ls -G"
-alias p='cd ~/Projects/MOTECH/'
+alias p='cd ~/Workspace'
 # alias ^L=clear
 
 # Mongoose Web Server Alias
 #alias mongoose="ip=`ifconfig ppp0 | grep inet | awk '{print $2}'` && url=\"http://$ip:8080\" && if [ $ip ]; then {print \"Web Server started with Document root at `pwd` At $url if I am on reliance Netconnect\nThis url is copied to clipboard as well\"} fi && if [ $ip ]; then {print $url} fi | pbcopy && nocorrect mongoose"
 
 #alias mongoose="ip=`curl -s $IP_RESOLVER_URL;echo` && sleep 2 && url=\"http://$ip:8080\" && if [ $ip ]; then {print \"Web Server started with Document root at `pwd` \nAt $url \nIf this is not your public Ip then Go To Hell !!!\nThis url is copied to clipboard as well\"} fi && if [ $ip ]; then {print $url} fi | pbcopy && nocorrect mongoose"
-
+alias ipaddr="curl ifconfig\.me/ip"
 # Aliases Copied from Somewhere .Not exactly sure what they do :P
 
 alias slrn="slrn -n"

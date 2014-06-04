@@ -29,3 +29,21 @@ check() {
     echo "ps -ef | grep -i \"*$1*\""
     ps -ef | grep -i "$1" | grep -v grep
 }
+
+v() {
+    if [ -e ".session.vim" ] 
+    then
+        vim -S .session.vim
+    else 
+        vim $@
+    fi  
+}
+
+gv() {
+    if [ -e ".session.vim" ] 
+    then
+        gvim -S .session.vim
+    else 
+        gvim $@
+    fi  
+}

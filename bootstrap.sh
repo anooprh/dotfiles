@@ -47,3 +47,4 @@ mkdir ~/.config/terminator
 
 ln -s ~/dotfiles/terminator/config ~/.config/terminator/config
 printf "Done\n"
+
