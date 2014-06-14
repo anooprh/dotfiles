@@ -1,8 +1,9 @@
 [global_config]
   enabled_plugins = CustomCommandsMenu, InactivityWatch, TestPlugin, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, Logger, MavenPluginURLHandler, LaunchpadBugURLHandler
-  title_transmit_bg_color = "#b00a00"
+  window_state = fullscreen
   handle_size = 2
   inactive_color_offset = 0.5
+  title_transmit_bg_color = "#b00a00"
 [keybindings]
   broadcast_all = <Primary><Shift>x
   toggle_zoom = <Primary>Return
