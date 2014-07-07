@@ -30,6 +30,7 @@ check() {
     ps -ef | grep -i "$1" | grep -v grep
 }
 
+#VIM
 v() {
     if [ -e ".session.vim" ] 
     then
@@ -39,6 +40,7 @@ v() {
     fi  
 }
 
+#gvim
 gv() {
     if [ -e ".session.vim" ] 
     then
@@ -46,4 +48,29 @@ gv() {
     else 
         gvim $@
     fi  
+}
+
+#start mongoose web server wrapper
+lserv() {
+    local ip_wifi=$(ifconfig wlp2s0 | grep "inet " | awk '{print $2}')
+    local port_wifi="8080"
+    local break_next="false"
+    for val in "$@"
+    do
+        if [[ $break_next == "true" ]]; then
+                break
+        fi
+        if [[ $val == "-listening_port" ]]; then
+            break_next="true"
+        fi
+    done
+    if [[ $break_next == "true" ]]; then
+           port_wifi=$val 
+    fi
+    local url="http://${ip_wifi}:${port_wifi}"
+    echo "Mongoose server strated: \n Directory `pwd` available at \n ${url}"
+    echo "${url}" | xcopy
+
+    mongoose $@
+
 }

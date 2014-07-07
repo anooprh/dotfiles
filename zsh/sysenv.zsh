@@ -10,7 +10,7 @@ export JAVA_HOME='/opt/java'
 
 export JAVA_OPTS='-Xms128m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m -Djava.awt.headless=true'
 
-export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m -agentpath:/Users/anooprh/Projects/MOTECH/ananya-delivery/ananya-kilkari-deploy/src/main/resources/faketime/libfaketime.jnilib'
+#export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m -agentpath:/Users/anooprh/Projects/MOTECH/ananya-delivery/ananya-kilkari-deploy/src/main/resources/faketime/libfaketime.jnilib' 
 
 export EC2_HOME=/Users/anooprh/.ec2
 
