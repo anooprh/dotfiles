@@ -28,6 +28,9 @@ printf "Done\n"
 printf "Setting up .vimrc.. "
 ln -s ~/.vim/vimrc ~/.vimrc
 printf "Done\n"
+printf "Setting up .gvimrc.. "
+ln -s ~/.vim/gvimrc ~/.gvimrc
+printf "Done\n"
 
 if [ -f ~/.tmux.conf ]; then 
     printf "Backing up existing .tmux.conf ... "

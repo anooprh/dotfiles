@@ -1,0 +1,10 @@
+" Setting Solarized Color Scheme, specifically for gvim 
+syntax enable
+set background=dark
+colorscheme solarized
+
+" Hiding all the extra things of gvim
+:set guioptions-=m  "remove menu bar
+:set guioptions-=T  "remove toolbar
+:set guioptions-=r  "remove right-hand scroll bar
+:set guioptions-=L  "remove left-hand scroll bar
