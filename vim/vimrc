@@ -180,8 +180,8 @@ nnoremap - <C-x>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Tab realted shortcuts
 noremap <A-t> <C-W>T " Opens a split in new tab
-noremap <A-PageUP> gT " Alt{PgUp , Pg-Down} for moving around tabs
-noremap <A-PageDown> gt
+noremap <leader>[ gT 
+noremap <leader>] gt
 set showtabline=2 "Always show tab bar"
 set tabpagemax=100 "Maximum tabs open. . If I open more than 100 tabs, I need 
                    " to see a psychiatrist
