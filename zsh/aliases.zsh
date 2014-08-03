@@ -13,9 +13,9 @@ alias gca='git commit --amend'
 alias gk='gitk'
 alias gd='git diff --color'
 alias st='stree'
-alias gg='git-gui'
+alias gg='git gui'
 alias gl="git log --oneline -10"
-alias glcid="git log --oneline -1 | awk '{print $1}' | pbcopy"
+alias glcid="git log --oneline -1 | awk '{print $1}' | xcopy"
 alias gl6="git log --oneline -5"
 alias gl3="git log --oneline -3"
 alias gpup='git pull && git submodule init && git submodule update && git submodule status'
@@ -92,3 +92,6 @@ alias repeatjob_psql='psql -U postgres -d motechquartz -c "SELECT qrtz_triggers.
   FROM qrtz_simple_triggers, qrtz_triggers WHERE qrtz_triggers.trigger_name = qrtz_simple_triggers.trigger_name order by qrtz_triggers.trigger_name;"'
 
 alias jobsp='cronjob_psql;repeatjob_psql'
+
+#Matlab launcher shortcut
+alias matlab="~/Softwares/MATLAB/bin/matlab"
