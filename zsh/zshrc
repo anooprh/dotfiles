@@ -44,3 +44,7 @@ done
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export HARCH=`echo $(uname -m) | sed "s/i./x/g"`
+export PATH=$PATH:$HOME/adt-bundle/sdk/platform-tools
+export PATH=$PATH:$HOME/adt-bundle/sdk/eclipse
+export PATH=$HOME/bootimg-tools:$PATH

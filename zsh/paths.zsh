@@ -19,3 +19,6 @@ export PATH=$PATH:~/Softwares/gradle-1.6/bin
 export PATH=$PATH:~/MyScripts/bin
 
 export PATH=$PATH:~/.gem/ruby/2.1.0/bin
+
+export PATH=$PATH:~/Softwares/elastic-map-reduce
+
