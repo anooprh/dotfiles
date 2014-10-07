@@ -93,7 +93,6 @@ ${color3}${voffset -5}${hr}
 ${offset 15}${color1}Core 1 : ${color2}${platform coretemp.0 temp 1}°C${alignr}${color1}Incoming :  ${tcp_portmon 1 32767 count}
 ${offset 15}${color1}Core 2 : ${color2}${platform coretemp.1 temp 1}°C${alignr}${color1}Outgoing : ${tcp_portmon 32768 65535 count}
 
-
 ${font Visitor TT1 BRK : pixelsize=12}${color1}CPU_Activity${color3}${alignc}${cpu cpu}%${font}
 ${color3}${voffset -5}${hr}
 ${offset 15}${color1}Core 1 : ${freq_g 1} GHz - ${color3}${cpu cpu1}% ${color1}${cpubar cpu1}
@@ -128,4 +127,5 @@ ${offset 15}${color2}${top_mem name 5}${color3}${goto 150}${top_mem mem 5}%${ali
 
 ${font Visitor TT1 BRK : pixelsize=12}${color1}Battery${font}
 ${color3}${voffset -5}${hr}
-${offset 15}${color1}Battery1: ${alignr}${color3}${battery_percent BAT1}%  ${color3}${battery_bar 8,100 BAT1}
+${offset 15}${color1}Battery1: ${alignr}${color3}${battery_percent BAT1}% ${color3}${battery_bar 8,100 BAT1}
+${alignr}${color2}${exec acpi -b | awk "{print $1}" | sed 's/\([^:]*\): \([^,]*\), \([0-9]*\)%.*/\2/'} :: ${exec acpi -b | awk '{print $5, $6, $7}'} 

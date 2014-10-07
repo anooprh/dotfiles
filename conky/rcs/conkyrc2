@@ -1,0 +1,75 @@
+# Slackware Conky Google Now Dark style #
+
+# Conky settings #
+background yes 
+update_interval 2
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_class Conky
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent no
+own_window_argb_visual yes
+own_window_argb_value 175
+
+minimum_size 230
+maximum_width 230
+
+# Alignment #
+alignment top_right
+gap_x 10
+gap_y 10
+
+border_inner_margin 15
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Open Sans Light:size=10
+
+override_utf8_locale yes
+
+imlib_cache_size 0
+
+# Color scheme - Tango Palette #
+default_color BABDB6 # aluminium
+
+color1 C4A000 # butter
+color2 CE5C00 # orange
+color3 8F5902 # chocolate
+color4 4E9A06 # chamemelon
+color5 204A87 # skyblue
+color6 5C3566 # Plum
+color7 CC0000 # scarlet red
+color8 BABDB6 # aluminium
+color9 A23436 # oil
+
+TEXT
+# conky google now
+${execi 600 curl -s "http://weather.yahooapis.com/forecastrss?p=15213&u=c" -o ~/.cache/conky/weather.xml}${font Open Sans Light:size=15}${execi 600 grep "yweather:location" ~/.cache/conky/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}, ${execi 600 grep "yweather:location" ~/.cache/conky/weather.xml | grep -o "country=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${font}${voffset -20}
+
+${font Open Sans Light:size=70}${alignr}${execi 600 grep "yweather:condition" ~/.cache/conky/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -35}
+
+${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:condition" ~/.cache/conky/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*").png ~/.cache/conky/weather.png}${image ~/.cache/conky/weather.png -p 1,45 -s 60x60}${voffset 18}
+${execi 600 grep "yweather:condition" ~/.cache/conky/weather.xml | grep -o "text=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | tr '[a-z]' '[A-Z]'}
+${image ~/.config/conky/conky-google-now/wind.png -p 0,135 -s 15x15}${voffset 3}${goto 35}${execi 600 grep "yweather:wind" ~/.cache/conky/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"} ${execi 600 grep "yweather:units" ~/.cache/conky/weather.xml | grep -o "speed=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}
+${image ~/.config/conky/conky-google-now/humidity.png -p 0,155 -s 15x15}${voffset 9}${goto 35}${execi 600 grep "yweather:atmosphere" ~/.cache/conky/weather.xml | grep -o "humidity=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"} %${voffset 6}
+${goto 18}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1' | tr '[a-z]' '[A-Z]'}${goto 70}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2' | tr '[a-z]' '[A-Z]'}${goto 120}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3' | tr '[a-z]' '[A-Z]'}${goto 170}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4' | tr '[a-z]' '[A-Z]'}${goto 220}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "day=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5' | tr '[a-z]' '[A-Z]'}
+${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1').png ~/.cache/conky/weather-1.png}${image ~/.cache/conky/weather-1.png -p 0,200 -s 30x30}${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2').png ~/.cache/conky/weather-2.png}${image ~/.cache/conky/weather-2.png -p 50,200 -s 30x30}${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3').png ~/.cache/conky/weather-3.png}${image ~/.cache/conky/weather-3.png -p 100,200 -s 30x30}${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4').png ~/.cache/conky/weather-4.png}${image ~/.cache/conky/weather-4.png -p 150,200 -s 30x30}${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "code=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5').png ~/.cache/conky/weather-5.png}${image ~/.cache/conky/weather-5.png -p 200,200 -s 30x30}${voffset 20}
+${goto 20}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1'}°${goto 70}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°${goto 120}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°${goto 170}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°${goto 220}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°
+${goto 20}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1'}°${goto 70}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°${goto 120}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°${goto 170}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°${goto 220}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°
+${hr}${voffset -30}
+# current desktop
+${goto 55}${font Open Sans Light:size=50}${if_match ${desktop}==1}${color2}${endif}• ${color}${if_match ${desktop}==2}${color2}${endif}• ${color}${if_match ${desktop}==3}${color2}${endif}• ${color}${if_match ${desktop}==4}${color2}${endif}•${color}${font}${voffset -15}
+# system date
+${goto 35}${font Open Sans Light:size=20}${color2}${time %a %d %b %Y}${color}${font}${voffset 10}
