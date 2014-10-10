@@ -57,7 +57,7 @@ alias grrs='gradlew runStub'
 
 # VLC Aliases
 
-alias vlc='vlc -I rc'
+alias vlc='vlc -I rc --vout none'
 
 # ZShell Aliases
 
