@@ -95,3 +95,6 @@ alias jobsp='cronjob_psql;repeatjob_psql'
 
 #Matlab launcher shortcut
 alias matlab="~/Softwares/MATLAB/bin/matlab"
+
+#File exlporer shortcut
+alias e="dolphin . 2&>1 >/dev/null &"
