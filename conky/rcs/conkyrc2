@@ -83,7 +83,3 @@ ${font Open Sans Light:size=40}${alignc}${time %I:%M}${font Open Sans Light:size
 
 ${hr}
 
-# Speaker Vloume
-Volume:  ${color2}${exec echo $(amixer | grep "Front .* Playback" | awk '{print $5}' | grep -Po '\d+' | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') / 1.52 | bc}  ${execbar  echo $(amixer | grep "Front .* Playback" | awk '{print $5}' | grep -Po '\d+' | awk '{ sum += $1; n++ } END { if (n > 0) print sum / n; }') / 1.52 | bc}
-${exec amixer | grep "Front .* Playback" | awk '{print $6}' | uniq}${color}${font}
-${hr}
