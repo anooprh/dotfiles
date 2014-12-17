@@ -23,7 +23,7 @@ minimum_size 250
 maximum_width 230
 
 # Alignment #
-alignment bottom_right
+alignment top_right
 gap_x 10
 gap_y 10
 
@@ -63,7 +63,7 @@ color9 A23436 # oil
 
 TEXT
 # conky google now
-${execi 600 curl -s "http://weather.yahooapis.com/forecastrss?p=15213&u=c" -o ~/.cache/conky/weather.xml}${font Open Sans Light:size=15}${execi 600 grep "yweather:location" ~/.cache/conky/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}, ${execi 600 grep "yweather:location" ~/.cache/conky/weather.xml | grep -o "country=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${font}${voffset -20}
+${execi 600 curl -s "http://weather.yahooapis.com/forecastrss?w=2295420&u=c" -o ~/.cache/conky/weather.xml}${font Open Sans Light:size=15}${execi 600 grep "yweather:location" ~/.cache/conky/weather.xml | grep -o "city=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}, ${execi 600 grep "yweather:location" ~/.cache/conky/weather.xml | grep -o "country=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}${font}${voffset -20}
 
 ${font Open Sans Light:size=70}${alignr}${execi 600 grep "yweather:condition" ~/.cache/conky/weather.xml | grep -o "temp=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*"}°${font}${voffset -35}
 
