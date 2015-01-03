@@ -76,10 +76,8 @@ ${execi 600 cp -f ~/.config/conky/conky-google-now/$(grep "yweather:forecast" ~/
 ${goto 20}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1'}°${goto 70}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°${goto 120}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°${goto 170}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°${goto 220}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "high=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°
 ${goto 20}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==1'}°${goto 70}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==2'}°${goto 120}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==3'}°${goto 170}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==4'}°${goto 220}${execi 600 grep "yweather:forecast" ~/.cache/conky/weather.xml | grep -o "low=\"[^\"]*\"" | grep -o "\"[^\"]*\"" | grep -o "[^\"]*" | awk 'NR==5'}°
 ${hr}
-
 # system date
 ${font Open Sans Light:size=20}${alignc}${time %a %m/%d/%y}${color}${font}
 ${font Open Sans Light:size=40}${alignc}${time %I:%M}${font Open Sans Light:size=15}${time :%S %p}${color}${font}
-
 ${hr}
 
