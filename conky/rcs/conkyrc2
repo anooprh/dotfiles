@@ -23,7 +23,7 @@ minimum_size 250
 maximum_width 230
 
 # Alignment #
-alignment bottom_right
+alignment top_right
 gap_x 10
 gap_y 10
 
