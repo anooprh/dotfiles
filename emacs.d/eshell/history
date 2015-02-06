@@ -1,0 +1,4 @@
+ls
+ll
+echo $SHELL
+ls

@@ -14,6 +14,21 @@
     yasnippet
     solarized-theme
     chess
+    elscreen
+    auto-complete
+    jedi
+    pyde
+    pyimpsort
+    pymacs
+    pysmell
+    python
+    python-cell
+    ac-python
+    anaconda-mode
+    ein
+    elpy
+    ipython
+    dired+
   ) "a list of packages to ensure are installed at launch.")
 
 ; method to check if all packages are installed
