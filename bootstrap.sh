@@ -32,6 +32,17 @@ printf "Setting up .gvimrc.. "
 ln -s ~/.vim/gvimrc ~/.gvimrc
 printf "Done\n"
 
+if [ -e ~/.emacs.d ]; then 
+    printf "Backing up existing .emacs.d ... "
+    mv ~/.emacs.d  ~/.emacs.d.bkp
+    printf "Done\n"
+fi
+printf "Setting up .vim folder "
+ln -s ~/dotfiles/emacs.d ~/.emacs.d
+printf "Done\n"
+
+
+
 if [ -f ~/.tmux.conf ]; then 
     printf "Backing up existing .tmux.conf ... "
     mv ~/.tmux.conf ~/.tmux.conf.bkp
