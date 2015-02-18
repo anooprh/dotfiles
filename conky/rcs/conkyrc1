@@ -65,13 +65,13 @@ use_spacer yes
 stippled_borders 5
 
 # Couleurs
-default_color FFFFFF #blanc
-default_shade_color 333333
-default_outline_color black
+default_color 000000 #blanc
+default_shade_color 000000
+default_outline_color 000000
 
-color3 cf1c00 #rouge
-color2 66FF00 #vert
-color1 176e88 #bleu
+color3 000000 #rouge
+color2 000000 #vert
+color1 000000 #bleu
 
 ${font Visitor TT1 BRK : pixelsize=12}${color1}${alignc}${exec cat /etc/lsb-release | grep "NAME" | cut -d "=" -f2} Inside${font}
 
@@ -91,9 +91,9 @@ ${offset 15}${color1}Core 2 : ${color2}${platform coretemp.1 temp 1}°C${alignr}
 ${font Visitor TT1 BRK : pixelsize=12}${color1}CPU_Activity${color3}${alignc}${cpu cpu}%${font}
 ${color3}${voffset -5}${hr}
 ${offset 15}${color1}Core 1 : ${freq_g 1} GHz - ${color3}${cpu cpu1}% ${color1}${cpubar cpu1}
-${offset 15}${cpugraph cpu1 25,285 176e88 66FF00}
+${offset 15}${cpugraph cpu1 25,285 757575 000000}
 ${offset 15}Core 2 : ${freq_g 2} GHz - ${color3}${cpu cpu2}% ${color1}${cpubar cpu2}
-${offset 15}${cpugraph cpu2 25,285 176e88 66FF00}
+${offset 15}${cpugraph cpu2 25,285 757575 000000}
 
 ${font Visitor TT1 BRK : pixelsize=12}${color1}Memory_Activity${font}
 ${color3}${voffset -5}${hr}

@@ -7,20 +7,20 @@ double_buffer yes
 no_buffers yes
 
 # Window specifications #
-#own_window yes
-#own_window_type override
-#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-#own_window_transparent yes
+own_window yes
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_transparent yes
 
 own_window yes
-own_window_title conky
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_argb_visual yes
-own_window_argb_value 255
-own_window_type normal
+#own_window_title conky
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+#own_window_argb_visual yes
+#own_window_argb_value 255
+#own_window_type normal
 
 minimum_size 250
-maximum_width 230
+maximum_width 350
 
 # Alignment #
 alignment top_right
@@ -81,3 +81,4 @@ ${font Open Sans Light:size=20}${alignc}${time %a %m/%d/%y}${color}${font}
 ${font Open Sans Light:size=40}${alignc}${time %I:%M}${font Open Sans Light:size=15}${time :%S %p}${color}${font}
 ${hr}
 
+€ý`€kd€ý`€kd€ý`€ku€ý`€kd€ý`:q€ý`:q
