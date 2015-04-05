@@ -30,3 +30,9 @@
 ;set line numbers
 (global-linum-mode 1)
 (setq linum-format " %d ")
+
+;set font size
+(set-face-attribute 'default nil :height 100)
+
+;diable toolbar
+(tool-bar-mode -1)

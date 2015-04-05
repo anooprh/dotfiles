@@ -80,5 +80,6 @@ ${hr}
 ${font Open Sans Light:size=20}${alignc}${time %a %m/%d/%y}${color}${font}
 ${font Open Sans Light:size=40}${alignc}${time %I:%M}${font Open Sans Light:size=15}${time :%S %p}${color}${font}
 ${hr}
+${font Inconsolata:size=13}${alignc}${execp python ~/dotfiles/conky/pythoncal.py}${font}
 
 €ý`€kd€ý`€kd€ý`€ku€ý`€kd€ý`:q€ý`:q
