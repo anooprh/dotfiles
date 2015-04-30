@@ -22,3 +22,5 @@ export PATH=$PATH:~/.gem/ruby/2.1.0/bin
 
 export PATH=$PATH:~/Softwares/elastic-map-reduce
 
+export PATH=$PATH:~/Softwares/sbt/bin
+
