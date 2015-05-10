@@ -8,6 +8,8 @@ export JASPER_HOME='/Users/anooprh/Softwares/jasperreports-server-cp-5.0.0-bin'
 
 export JAVA_HOME='/opt/java'
 
+export SCALA_HOME='/home/anoop/Softwares/scala-2.11.6'
+
 export JAVA_OPTS='-Xms128m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m -Djava.awt.headless=true'
 
 export MAVEN_OPTS='-Xms128m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m'

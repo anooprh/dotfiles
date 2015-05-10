@@ -24,3 +24,4 @@ export PATH=$PATH:~/Softwares/elastic-map-reduce
 
 export PATH=$PATH:~/Softwares/sbt/bin
 
+export PATH=$PATH:$SCALA_HOME/bin
