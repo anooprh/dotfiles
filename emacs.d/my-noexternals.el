@@ -36,3 +36,6 @@
 
 ;diable toolbar
 (tool-bar-mode -1)
+
+(windmove-default-keybindings)
+(setq windmove-wrap-around t)
