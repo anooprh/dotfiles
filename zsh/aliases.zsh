@@ -94,7 +94,9 @@ alias repeatjob_psql='psql -U postgres -d motechquartz -c "SELECT qrtz_triggers.
 alias jobsp='cronjob_psql;repeatjob_psql'
 
 #Matlab launcher shortcut
-alias matlab="~/Softwares/MATLAB/bin/matlab"
+#alias matlab="~/Softwares/MATLAB/bin/matlab"
 
 #File exlporer shortcut
-alias e="dolphin . 2>&1 >/dev/null &"
+#alias e="dolphin . 2>&1 >/dev/null &"
+
+alias emacs="/usr/local/Cellar/emacs/24.5/Emacs.app/Contents/MacOS/Emacs"
