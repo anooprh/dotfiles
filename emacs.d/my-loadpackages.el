@@ -8,3 +8,8 @@
 ;; Auto complete setup
 (require 'auto-complete-config)
 (ac-config-default)
+
+;; Ctrl W feature of intelliJ, apparently called Expand Region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)      ;;Expand region with ctrl =
+(global-set-key (kbd "C-+") 'er/contract-region)  ;;Contract with ctrl shift =
