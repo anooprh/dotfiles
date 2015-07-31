@@ -89,3 +89,9 @@
     )
 )
 (global-set-key (kbd "C-/") 'comment-or-uncomment-region-or-line)
+
+;; Set Title bar to show the name of the full path of the file which is open
+(setq frame-title-format
+      (list (format "%s %%S: %%j " (system-name))
+        '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+

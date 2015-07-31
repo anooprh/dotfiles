@@ -35,6 +35,7 @@
     projectile
     move-text
     helm
+    helm-config
 ) "a list of packages to ensure are installed at launch.")
 
 ; method to check if all packages are installed
