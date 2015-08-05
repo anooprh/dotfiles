@@ -6,7 +6,7 @@ export GRADLE_HOME='/Users/anooprh/Softwares/gradle-1.6'
 
 export JASPER_HOME='/Users/anooprh/Softwares/jasperreports-server-cp-5.0.0-bin'
 
-export JAVA_HOME='/opt/java'
+export JAVA_HOME='/home/hallur/Softwares/jdk1.8.0_51'
 
 export SCALA_HOME='/home/anoop/Softwares/scala-2.11.6'
 
