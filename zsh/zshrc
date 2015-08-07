@@ -13,7 +13,8 @@ HISTSIZE=10000000000000
 SAVEHIST=10000000000000
 HOSTNAME="`hostname`"
 PAGER='less'
-EDITOR='vim'
+EDITOR='emacs'
+VISUAL=$EDITOR
     autoload colors zsh/terminfo
     if [[ "$terminfo[colors]" -ge 8 ]]; then
    colors
@@ -34,7 +35,7 @@ LC_CTYPE=C
 if [ $SSH_TTY ]; then
   MUTT_EDITOR=vim
 else
-  MUTT_EDITOR=vim
+  MUTT_EDITOR=emacs
 fi
 
 # Load up other .zsh files in the directory
