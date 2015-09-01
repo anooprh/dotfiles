@@ -102,3 +102,8 @@
 (global-set-key (kbd "M-s /")   #'helm-multi-swoop)
 
 ;;------------------------------------------------------------------------------
+
+;; Neotree(similar to nerdtree in vim
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
