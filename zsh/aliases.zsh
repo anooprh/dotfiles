@@ -8,6 +8,7 @@ alias gpr="git pull --rebase"
 alias grh='git reset --hard'
 alias gch='git checkout'
 alias ga='git add'
+alias gb='git branch'
 alias gc='git commit -m'
 alias gca='git commit --amend'
 alias gk='gitk'
