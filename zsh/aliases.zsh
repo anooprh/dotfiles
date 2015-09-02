@@ -20,6 +20,7 @@ alias glcid="git log --oneline -1 | awk '{print $1}' | xcopy"
 alias gl6="git log --oneline -5"
 alias gl3="git log --oneline -3"
 alias gpup='git pull && git submodule init && git submodule update && git submodule status'
+alias gcd='cd `git rev-parse --show-toplevel`'
 
 # Tomcat Aliases
 
