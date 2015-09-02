@@ -12,7 +12,7 @@ alias gb='git branch'
 alias gc='git commit -m'
 alias gca='git commit --amend'
 alias gk='gitk'
-alias gd='git diff --color'
+#alias gd='git diff --color'
 alias st='stree'
 alias gg='git gui'
 alias gl="git log --oneline -10"
@@ -20,7 +20,7 @@ alias glcid="git log --oneline -1 | awk '{print $1}' | xcopy"
 alias gl6="git log --oneline -5"
 alias gl3="git log --oneline -3"
 alias gpup='git pull && git submodule init && git submodule update && git submodule status'
-alias gcd='cd `git rev-parse --show-toplevel`'
+alias gd='cd `git rev-parse --show-toplevel`'
 
 # Tomcat Aliases
 
