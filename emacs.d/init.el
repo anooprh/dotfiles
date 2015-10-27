@@ -21,10 +21,11 @@
 ;; List of required packages
 (defvar required-packages
   '(
-  	solarized-theme
-  	sr-speedbar
+    solarized-theme
+    sr-speedbar
     elscreen
     expand-region
+    hideshowvis
 ;    magit
 ;    yasnippet
 ;    solarized-theme
@@ -291,4 +292,27 @@ Version 2015-09-18"
             (message "Buffer text copied")
           (message "Text copied"))))))
 (global-set-key (kbd "M-w") 'xah-copy-line-or-region)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Enable Folding/Unfolding of code with mouse wherever possible
+;; Customizing HideShowvis package : https://melpa.org/#/hideshowvis
+(autoload 'hideshowvis-enable "hideshowvis" "Highlight foldable regions")
+(autoload 'hideshowvis-minor-mode
+  "hideshowvis"
+  "Will indicate regions foldable with hideshow in the fringe."
+  'interactive)
+
+;; Enabling list of modes for which fold should be active
+(dolist (hook (list
+	       ;; List of modes wher folding should be done
+	       'emacs-lisp-mode-hook
+               'c++-mode-hook
+	       'java-mode-hook
+	      )
+	)
+ (add-hook hook 'hideshowvis-enable))
+(hideshowvis-symbols)
+
+;; Customizing the symbol
+(define-fringe-bitmap 'hideshowvis-hideable-marker [255 255 255 255 255 255 255 255])
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
