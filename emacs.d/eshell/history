@@ -1,8 +1,0 @@
-ls
-dd ../
-ls
-cd ../
-ls
-cd source/
-ls
-exit
