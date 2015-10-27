@@ -26,31 +26,33 @@
     elscreen
     expand-region
     hideshowvis
-;    magit
-;    yasnippet
-;    solarized-theme
-;    chess
-;    auto-complete
-;    jedi
-;    pyde
-;    pyimpsort
-;    pymacs
-;    pysmell
-;    python
-;    python-cell
-;    ac-python
-;    anaconda-mode
-;    ein
-;    elpy
-;    ipython
-;    dired+
-;    transpose-frame
-;    python-mode
-;    expand-region
-;    projectile
-;    move-text
-;    helm
-;    neotree
+    gh-md  ; Markdown viewer from github realtime
+    markdown-mode
+;;    magit
+;;    yasnippet
+;;    solarized-theme
+;;    chess
+;;    auto-complete
+;;    jedi
+;;    pyde
+;;    pyimpsort
+;;    pymacs
+;;    pysmell
+;;    python
+;;    python-cell
+;;    ac-python
+;;    anaconda-mode
+;;    ein
+;;    elpy
+;;    ipython
+;;    dired+
+;;    transpose-frame
+;;    python-mode
+;;    expand-region
+;;    projectile
+;;    move-text
+;;    helm
+;;    neotree
 ) "a list of packages to ensure are installed at launch.")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -94,10 +96,12 @@
 
 ;; Prevent Creation of Backup files
 (setq make-backup-files nil)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Disable auto-save
 (setq auto-save-default nil)
+
+;; Prevent Lockfiles
+(setq create-lockfiles nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Disable all sounds
@@ -105,8 +109,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Tab indentation
-(setq tab-width 2
-      indent-tabs-mode nil)
+(setq tab-width 2 indent-tabs-mode nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Set column numbers
@@ -352,4 +355,12 @@ Version 2015-09-18"
 
 ;; Join Lines with M-j
 (global-set-key (kbd "M-j") (lambda () (interactive) (join-line -1)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Markdown real time
+(add-hook 'markdown-mode-hook 
+          (lambda () 
+             (add-hook 'after-save-hook 'gh-md-render-buffer nil 'make-it-local)))
+; (eval-after-load "markdown-mode"
+;     '(define-key markdown-mode-map (kbd "C-c c") (message "Hello")))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
