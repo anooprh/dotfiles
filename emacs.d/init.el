@@ -28,7 +28,8 @@
     hideshowvis
     gh-md  ; Markdown viewer from github realtime
     markdown-mode
-;;    magit
+    diff-hl
+    magit
 ;;    yasnippet
 ;;    solarized-theme
 ;;    chess
@@ -363,4 +364,8 @@ Version 2015-09-18"
              (add-hook 'after-save-hook 'gh-md-render-buffer nil 'make-it-local)))
 ; (eval-after-load "markdown-mode"
 ;     '(define-key markdown-mode-map (kbd "C-c c") (message "Hello")))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Show git diff in side gutter of emacs
+(global-diff-hl-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
