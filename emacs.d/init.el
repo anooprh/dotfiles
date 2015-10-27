@@ -89,6 +89,10 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; Open Emacs in Full screen mode always
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; Customizing the cursor
 (setq-default cursor-type 'bar)
 ; (set-cursor-color "#ffffff") 
