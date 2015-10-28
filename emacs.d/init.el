@@ -31,31 +31,31 @@
     diff-hl
     magit
     smooth-scrolling
-;;    yasnippet
-;;    solarized-theme
-;;    chess
-;;    auto-complete
-;;    jedi
-;;    pyde
-;;    pyimpsort
-;;    pymacs
-;;    pysmell
-;;    python
-;;    python-cell
-;;    ac-python
-;;    anaconda-mode
-;;    ein
-;;    elpy
-;;    ipython
-;;    dired+
-;;    transpose-frame
-;;    python-mode
-;;    expand-region
-;;    projectile
-;;    move-text
-;;    helm
-;;    neotree
-) "a list of packages to ensure are installed at launch.")
+    ;;    yasnippet
+    ;;    solarized-theme
+    ;;    chess
+    ;;    auto-complete
+    ;;    jedi
+    ;;    pyde
+    ;;    pyimpsort
+    ;;    pymacs
+    ;;    pysmell
+    ;;    python
+    ;;    python-cell
+    ;;    ac-python
+    ;;    anaconda-mode
+    ;;    ein
+    ;;    elpy
+    ;;    ipython
+    ;;    dired+
+    ;;    transpose-frame
+    ;;    python-mode
+    ;;    expand-region
+    ;;    projectile
+    ;;    move-text
+    ;;    helm
+    ;;    neotree
+    ) "a list of packages to ensure are installed at launch.")
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Method to check if all packages are installed
@@ -78,11 +78,11 @@
 
 ;; Set the Theme- All the below themes are good
 (load-theme 'tango t)
-;(load-theme 'whiteboard t)
-;(load-theme 'leuven t)
-;(load-theme 'misterioso t)
-;(load-theme 'tango-dark t)
-;(load-theme 'wheatgrass t)
+;;(load-theme 'whiteboard t)
+;;(load-theme 'leuven t)
+;;(load-theme 'misterioso t)
+;;(load-theme 'tango-dark t)
+;;(load-theme 'wheatgrass t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -96,8 +96,8 @@
 
 ;; Customizing the cursor
 (setq-default cursor-type 'bar)
-; (set-cursor-color "#ffffff") 
-; Visit https://color.adobe.com/ to pick your fav color
+;; (set-cursor-color "#ffffff") 
+;; Visit https://color.adobe.com/ to pick your fav color
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; 
 
 ;; Prevent Creation of Backup files
@@ -193,8 +193,8 @@
 
 ;; Set Title bar to show the name of the full path of the file which is open
 (setq frame-title-format
-	(list (format "%s %%S: %%j " (system-name))
-    	'(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+      (list (format "%s %%S: %%j " (system-name))
+	    '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Bind Alt Shift Up/Down to move regions of text up and down
@@ -312,14 +312,16 @@ Version 2015-09-18"
   'interactive)
 
 ;; Enabling list of modes for which fold should be active
-(dolist (hook (list
-	       ;; List of modes wher folding should be done
-	       'emacs-lisp-mode-hook
-               'c++-mode-hook
-	       'java-mode-hook
-	      )
-	)
- (add-hook hook 'hideshowvis-enable))
+(dolist
+    (hook
+     (list
+      ;; List of modes wher folding should be done
+      'emacs-lisp-mode-hook
+      'c++-mode-hook
+      'java-mode-hook
+      )
+     )
+  (add-hook hook 'hideshowvis-enable))
 (hideshowvis-symbols)
 
 ;; Customizing the symbol
@@ -346,27 +348,28 @@ Version 2015-09-18"
 
 ;; Toggle Comment on Line/Selected Region
 (defun comment-or-uncomment-region-or-line ()
-    "Comments or uncomments the region or the current line if there's no active region."
-    (interactive)
-    (let (beg end)
-        (if (region-active-p)
-            (setq beg (region-beginning) end (region-end))
-            (setq beg (line-beginning-position) end (line-end-position)))
-        (comment-or-uncomment-region beg end)
-        (next-line)))
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+	(setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)
+    (next-line)))
 (global-set-key (kbd "M-;") 'comment-or-uncomment-region-or-line)
 ;; Overriding default behaviour to insert comment at end of line.
 ;; Rather toggle comment on whole line/ selected region
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Join Lines with M-j
-(global-set-key (kbd "M-j") (lambda () (interactive) (join-line -1)))
+(global-set-key (kbd "M-j")
+		(lambda () (interactive) (join-line -1)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Markdown real time
 (add-hook 'markdown-mode-hook 
           (lambda () 
-             (add-hook 'after-save-hook 'gh-md-render-buffer nil 'make-it-local)))
+	    (add-hook 'after-save-hook 'gh-md-render-buffer nil 'make-it-local)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Show git diff in side gutter of emacs
