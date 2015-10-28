@@ -30,6 +30,7 @@
     markdown-mode
     diff-hl
     magit
+    smooth-scrolling
 ;;    yasnippet
 ;;    solarized-theme
 ;;    chess
@@ -366,10 +367,24 @@ Version 2015-09-18"
 (add-hook 'markdown-mode-hook 
           (lambda () 
              (add-hook 'after-save-hook 'gh-md-render-buffer nil 'make-it-local)))
-; (eval-after-load "markdown-mode"
-;     '(define-key markdown-mode-map (kbd "C-c c") (message "Hello")))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Show git diff in side gutter of emacs
 (global-diff-hl-mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Magit alias to M-x g s
+(global-set-key (kbd "M-g s") 'magit-status)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Set smooth scrolling
+;; Mouse
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1) ((control) . nil)))
+(setq mouse-wheel-progressive-speed nil)
+;; Keyboard
+(require 'smooth-scrolling)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Upon Paste, if something is selected, replace it rather than paste next to it
+(delete-selection-mode t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
