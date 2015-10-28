@@ -29,8 +29,9 @@
     gh-md  ; Markdown viewer from github realtime
     markdown-mode
     diff-hl
-    magit
+    ;;    magit
     smooth-scrolling
+    cmake-mode
     ;;    yasnippet
     ;;    solarized-theme
     ;;    chess
