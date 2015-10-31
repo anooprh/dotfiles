@@ -33,6 +33,11 @@
     smooth-scrolling
     cmake-mode
     helm
+    flycheck
+    projectile
+    helm-projectile
+    direx
+    dired+
     ;;    yasnippet
     ;;    solarized-theme
     ;;    chess
@@ -422,4 +427,22 @@ Version 2015-09-18"
 (global-set-key (kbd "C-S-s") 'helm-occur)
 
 (helm-mode t)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Flycheck enable -> Syntax checking on the fly
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Setup Projectile and make it play nicely with helm
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(setq projectile-switch-project-action 'helm-projectile)
+(helm-projectile-on)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Dired show file name in human readable format
+(setq dired-listing-switches "-alhk")
+
+;; Setting up shortcut key for direx
+(global-set-key (kbd "C-x C-d") 'direx-project:jump-to-project-root)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

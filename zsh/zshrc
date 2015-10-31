@@ -49,3 +49,8 @@ export HARCH=`echo $(uname -m) | sed "s/i./x/g"`
 export PATH=$PATH:$HOME/adt-bundle/sdk/platform-tools
 export PATH=$PATH:$HOME/adt-bundle/sdk/eclipse
 export PATH=$HOME/bootimg-tools:$PATH
+
+export SCSDK_HOME="/home/hallur/Workspace/sc_sdk/"
+export SCSDK_LDAP=hallur
+export PATH=$PATH:"${SCSDK_HOME}scripts/unix"
+export PATH=$PATH:"${SCSDK_HOME}workers/dependencies/third_party/apache-maven-3.0/bin"
