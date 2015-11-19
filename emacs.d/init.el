@@ -38,6 +38,7 @@
     helm-projectile
     direx
     dired+
+    ggtags
     ;;    yasnippet
     ;;    solarized-theme
     ;;    chess
@@ -122,7 +123,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Disable Toolbar
-(tool-bar-mode -1)
+;;(tool-bar-mode -1)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; Tab indentation
@@ -836,4 +837,14 @@ This advice can make `other-window' skip `sr-speedbar' window."
     (when (and (sr-speedbar-window-exist-p sr-speedbar-window)
                (eq sr-speedbar-window (selected-window)))
       (other-window count))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Enable ggtags mode by default in C,C++ and Java
+(add-hook 'c-mode-common-hook
+  (lambda ()
+    (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
+      (ggtags-mode 1)
+      )
+    )
+  )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
