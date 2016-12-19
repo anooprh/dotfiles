@@ -43,6 +43,10 @@ for file in ~/dotfiles/zsh/*.zsh; do
     . $file
 done
 
+# Activate python autoenv
+# https://github.com/kennethreitz/autoenv/
+source /usr/local/bin/activate.sh
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 export HARCH=`echo $(uname -m) | sed "s/i./x/g"`
@@ -54,3 +58,4 @@ export SCSDK_HOME="/home/hallur/Workspace/sc_sdk/"
 export SCSDK_LDAP=hallur
 export PATH=$PATH:"${SCSDK_HOME}scripts/unix"
 export PATH=$PATH:"${SCSDK_HOME}workers/dependencies/third_party/apache-maven-3.0/bin"
+
