@@ -358,7 +358,7 @@ Version 2015-09-18"
            (set-window-start w2 s1)))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; Toggle Comment on Line/Selected Region
+;; Toggle Comment on Line/Selected Region with Alt + ;
 (defun comment-or-uncomment-region-or-line ()
   "Comments or uncomments the region or the current line if there's no active region."
   (interactive)
