@@ -45,7 +45,7 @@ done
 
 # Activate python autoenv
 # https://github.com/kennethreitz/autoenv/
-source /usr/local/bin/activate.sh
+# source /usr/local/bin/activate.sh
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
