@@ -59,3 +59,79 @@ export SCSDK_LDAP=hallur
 export PATH=$PATH:"${SCSDK_HOME}scripts/unix"
 export PATH=$PATH:"${SCSDK_HOME}workers/dependencies/third_party/apache-maven-3.0/bin"
 
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+ alias dmoa='ssh mongoc-00a.dev0.solvvy.co'
+ alias dmra='ssh mordor-00a.dev0.solvvy.co'
+ alias dapa='ssh api-00a.dev0.solvvy.co'
+ alias dapb='ssh api-00b.dev0.solvvy.co'
+ alias dmya='ssh mysql-00a.dev0.solvvy.co'
+ alias dasa='ssh apisearch-00a.dev3.solvvy.co'
+ alias desa='ssh elasticsearch-00a.dev3.solvvy.co'
+ alias desb='ssh elasticsearch-00b.dev3.solvvy.co'
+
+ alias cmoa='ssh mongoc-00a.canary.solvvy.co'
+ alias cmra='ssh mordor-00a.canary.solvvy.co'
+ alias cmrb='ssh mordor-00b.canary.solvvy.co'
+ alias capa='ssh api-00a.canary.solvvy.co'
+ alias capb='ssh api-00b.canary.solvvy.co'
+ alias capc='ssh api-00c.canary.solvvy.co'
+ alias cmya='ssh mysql-00a.canary.solvvy.co'
+ alias cmyb='ssh mysql-00b.canary.solvvy.co'
+ alias casa='ssh apisearch-00a.canary.solvvy.co'
+ alias casb='ssh apisearch-00b.canary.solvvy.co'
+ alias casc='ssh apisearch-00c.canary.solvvy.co'
+ alias casd='ssh apisearch-00d.canary.solvvy.co'
+ alias cesa='ssh elasticsearch-00a.canary.solvvy.co'
+ alias cesb='ssh elasticsearch-00b.canary.solvvy.co'
+ alias cesc='ssh elasticsearch-00c.canary.solvvy.co'
+ alias cesd='ssh elasticsearch-00d.canary.solvvy.co'
+ alias cese='ssh elasticsearch-00e.canary.solvvy.co'
+ alias cesf='ssh elasticsearch-00f.canary.solvvy.co'
+
+ alias pmoa='ssh mongoc-00a.prod.solvvy.co'
+ alias pmra='ssh mordor-00a.prod.solvvy.co'
+ alias pmrb='ssh mordor-00b.prod.solvvy.co'
+ alias papa='ssh api-00a.prod.solvvy.co'
+ alias papb='ssh api-00b.prod.solvvy.co'
+ alias papc='ssh api-00c.prod.solvvy.co'
+ alias pmya='ssh mysql-00a.prod.solvvy.co'
+ alias pmyb='ssh mysql-00b.prod.solvvy.co'
+ alias pasa='ssh apisearch-00a.prod.solvvy.co'
+ alias pasb='ssh apisearch-00b.prod.solvvy.co'
+ alias pasc='ssh apisearch-00c.prod.solvvy.co'
+ alias pasd='ssh apisearch-00d.prod.solvvy.co'
+ alias pesa='ssh elasticsearch-00a.prod.solvvy.co'
+ alias pesb='ssh elasticsearch-00b.prod.solvvy.co'
+ alias pesc='ssh elasticsearch-00c.prod.solvvy.co'
+ alias pesd='ssh elasticsearch-00d.prod.solvvy.co'
+ alias pese='ssh elasticsearch-00e.prod.solvvy.co'
+ alias pesf='ssh elasticsearch-00f.prod.solvvy.co'
+
+ alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative | less -R"
+ alias ts='date -u +%Y%m%d%H%M%S'
+ alias dus='sudo du -s * | sort -rn | head'
+ alias mytop='top -s1 -o cpu -R -F'
+
+ alias link-solvvy-util='rm -Rf ./node_modules/solvvy-util && cd node_modules && ln -s /Users/justin/code/solvvy/node-solvvy-util solvvy-util'
+
+ alias apidocs-auth='open http://localhost:3001/docs/'
+ alias apidocs-org='open http://localhost:3002/docs/'
+ alias apidocs-external='open http://localhost:3003/docs/'
+ alias apidocs-tutor='open http://localhost:3004/docs/'
+ alias apidocs-ambassador='open http://localhost:3005/docs/'
+ alias apidocs-solutions='open http://localhost:3006/docs/'
+ alias apidocs-queries='open http://localhost:3007/docs/'
+ alias apidocs-skynet='open http://localhost:3008/docs/'
+ alias apidocs-events='open http://localhost:3009/docs/'
+ alias apidocs-caucus='open http://localhost:3010/docs/'
+ alias apidocs-search='open http://localhost:3011/docs/'
+ alias apidocs-sauron='open http://localhost:6060/docs/'
+
+ alias solvvy-git-pull='cd ~/code/solvvy; for d in *; do echo; echo $d; echo; cd $d; git pull; cd ..; done'
+export ES_HOME=/Users/anoop/Workspace/elasticsearch-2.3.1
+alias active-orgs='cd /Users/anoop/Workspace/misc-scripts/src/python; python -c "from api_client import *;  print(\" \".join(str(i) for i in get_active_orgs()))"'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
