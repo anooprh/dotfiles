@@ -19,6 +19,7 @@ alias gl="git log --oneline -10"
 alias glcid="git log --oneline -1 | awk '{print $1}' | xcopy"
 alias gl6="git log --oneline -5"
 alias gl3="git log --oneline -3"
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative | less -R"
 alias gpup='git pull && git submodule init && git submodule update && git submodule status'
 alias gd='cd `git rev-parse --show-toplevel`'
 
