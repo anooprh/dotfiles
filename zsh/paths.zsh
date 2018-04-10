@@ -27,3 +27,4 @@ export PATH=$PATH:~/Softwares/sbt/bin
 export PATH=$PATH:$SCALA_HOME/bin
 
 export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$PATH:~/anaconda3/bin

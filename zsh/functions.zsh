@@ -54,7 +54,7 @@ gv() {
 # Usage lserv       --> will start webserver at 8080 port
 #       lserv -listening_port 7777 will start web server at 7777 port
 lserv() {
-    local ip_wifi=$(ifconfig wlp2s0 | grep "inet " | awk '{print $2}')
+    local ip_wifi=$(ifconfig en0 | grep "inet " | awk '{print $2}')
     local port_wifi="8080"
     local break_next="false"
     for val in "$@"
@@ -71,6 +71,6 @@ lserv() {
     fi
     local url="http://${ip_wifi}:${port_wifi}"
     echo "Mongoose server strated: \n Directory `pwd` available at \n ${url}"
-    echo "${url}" | xcopy
+    echo "${url}" | pbcopy
     mongoose $@
 }

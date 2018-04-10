@@ -1,6 +1,6 @@
 ######################################################################
-#                    Anoop's zshrc file v0.3
-######################################################################
+#                    Anoop's zshrc file v0.
+#####################################################################
 
 # Start tmux when ZSH starts
 # if [ "$TMUX" = "" ]; then tmux; fi # Not doing this for now
@@ -68,3 +68,139 @@ alias mytop='top -s1 -o cpu -R -F'
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#
+
+alias d0apa='ssh api-00a.dev0.solvvy.co'
+alias d0apb='ssh api-00b.dev0.solvvy.co'
+alias d0asa='ssh apisearch-00a.dev0.solvvy.co'
+alias d0esa='ssh elasticsearch-00a.dev0.solvvy.co'
+alias d0esb='ssh elasticsearch-00b.dev0.solvvy.co'
+alias d0moa='ssh mongoc-00a.dev0.solvvy.co'
+alias d0mra='ssh mordor-00a.dev0.solvvy.co'
+alias d0mya='ssh mysql-00a.dev0.solvvy.co'
+alias d1apa='ssh api-00a.dev1.solvvy.co'
+alias d1apb='ssh api-00b.dev1.solvvy.co'
+alias d1asa='ssh apisearch-00a.dev1.solvvy.co'
+alias d1esa='ssh elasticsearch-00a.dev1.solvvy.co'
+alias d1esb='ssh elasticsearch-00b.dev1.solvvy.co'
+alias d1moa='ssh mongoc-00a.dev1.solvvy.co'
+alias d1mra='ssh mordor-00a.dev1.solvvy.co'
+alias d1mya='ssh mysql-00a.dev1.solvvy.co'
+alias d2apa='ssh api-00a.dev2.solvvy.co'
+alias d2apb='ssh api-00b.dev2.solvvy.co'
+alias d2asa='ssh apisearch-00a.dev2.solvvy.co'
+alias d2esa='ssh elasticsearch-00a.dev2.solvvy.co'
+alias d2esb='ssh elasticsearch-00b.dev2.solvvy.co'
+alias d2moa='ssh mongoc-00a.dev2.solvvy.co'
+alias d2mra='ssh mordor-00a.dev2.solvvy.co'
+alias d2mya='ssh mysql-00a.dev2.solvvy.co'
+alias d3apa='ssh api-00a.dev3.solvvy.co'
+alias d3apb='ssh api-00b.dev3.solvvy.co'
+alias d3asa='ssh apisearch-00a.dev3.solvvy.co'
+alias d3esa='ssh elasticsearch-00a.dev3.solvvy.co'
+alias d3esb='ssh elasticsearch-00b.dev3.solvvy.co'
+alias d3moa='ssh mongoc-00a.dev3.solvvy.co'
+alias d3mra='ssh mordor-00a.dev3.solvvy.co'
+alias d3mya='ssh mysql-00a.dev3.solvvy.co'
+alias capa='ssh api-00a.canary.solvvy.co'
+alias capb='ssh api-00b.canary.solvvy.co'
+alias capc='ssh api-00c.canary.solvvy.co'
+alias casa='ssh apisearch-00a.canary.solvvy.co'
+alias casb='ssh apisearch-00b.canary.solvvy.co'
+alias casc='ssh apisearch-00c.canary.solvvy.co'
+alias casd='ssh apisearch-00d.canary.solvvy.co'
+alias cesa='ssh elasticsearch-00a.canary.solvvy.co'
+alias cesb='ssh elasticsearch-00b.canary.solvvy.co'
+alias cesc='ssh elasticsearch-00c.canary.solvvy.co'
+alias cesd='ssh elasticsearch-00d.canary.solvvy.co'
+alias cese='ssh elasticsearch-00e.canary.solvvy.co'
+alias cesf='ssh elasticsearch-00f.canary.solvvy.co'
+alias cmoa='ssh mongoc-00a.canary.solvvy.co'
+alias cmra='ssh mordor-00a.canary.solvvy.co'
+alias cmrb='ssh mordor-00b.canary.solvvy.co'
+alias cmya='ssh mysql-00a.canary.solvvy.co'
+alias cmyb='ssh mysql-00b.canary.solvvy.co'
+alias papa='ssh api-00a.prod.solvvy.co'
+alias papb='ssh api-00b.prod.solvvy.co'
+alias papc='ssh api-00c.prod.solvvy.co'
+alias pasa='ssh apisearch-00a.prod.solvvy.co'
+alias pasb='ssh apisearch-00b.prod.solvvy.co'
+alias pasc='ssh apisearch-00c.prod.solvvy.co'
+alias pasd='ssh apisearch-00d.prod.solvvy.co'
+alias pesa='ssh elasticsearch-00a.prod.solvvy.co'
+alias pesb='ssh elasticsearch-00b.prod.solvvy.co'
+alias pesc='ssh elasticsearch-00c.prod.solvvy.co'
+alias pesd='ssh elasticsearch-00d.prod.solvvy.co'
+alias pese='ssh elasticsearch-00e.prod.solvvy.co'
+alias pesf='ssh elasticsearch-00f.prod.solvvy.co'
+alias pmoa='ssh mongoc-00a.prod.solvvy.co'
+alias pmra='ssh mordor-00a.prod.solvvy.co'
+alias pmrb='ssh mordor-00b.prod.solvvy.co'
+alias pmya='ssh mysql-00a.prod.solvvy.co'
+alias pmyb='ssh mysql-00b.prod.solvvy.co'
+alias jenkins='ssh 172.32.1.43'
+alias kill-all-ssh='ps -fu conradroche | grep ssh | grep -v grep | perl -pe "s/ +/ /g" | cut -d" " -f3 | xargs kill'
+
+drestart() {
+  docker-compose stop $1
+  docker-compose build $1 || { echo "docker build failed: $1"; return; }
+  docker-compose start $1
+}
+
+
+dreup() {
+  docker-compose stop $1
+  docker-compose build $1
+  docker-compose up $1
+}
+
+dclean() {
+  # docker rm $(docker ps -q -f 'status=exited')
+  # docker rmi $(docker images -q -f "dangling=true")
+  # docker volume rm $(docker volume ls -qf dangling=true)
+  docker system prune -f
+}
+
+dinfra() {
+  docker-compose create mysql redis mongo rabbitmq
+  docker-compose start mysql redis mongo rabbitmq
+}
+
+ddata() {
+  for db in api_org api_caucus api_tutor;
+  do
+    mysql -h 127.0.0.1 -P 3306 -u root -ppassword -e "create database $db;"
+    mysql $db -h 127.0.0.1 -P 3306 -u root -ppassword < ~/Downloads/db_dump/dev0_$db.dump;
+  done
+
+  mongoimport -d api_events -c activity < ~/Downloads/db_dump/dev0_api_events_activity
+  mongoimport -d api_events -c metrics < ~/Downloads/db_dump/dev0_api_events_metrics
+  mongoimport -d api_events -c pixels < ~/Downloads/db_dump/dev0_api_events_pixels
+
+  mongoimport -d api_external -c resources < ~/Downloads/db_dump/dev0_api_external_resources
+
+  mongoimport -d api_ambassador -c connectors < ~/Downloads/db_dump/dev0_api_ambassador_connectors
+  mongoimport -d api_ambassador -c nonces < ~/Downloads/db_dump/dev0_api_ambassador_nonces
+  mongoimport -d api_ambassador -c requests < ~/Downloads/db_dump/dev0_api_ambassador_requests
+
+  mongoimport -d api_onboarding -c demos < ~/Downloads/db_dump/dev0_api_onboarding_demos
+  mongoimport -d api_onboarding -c invitations < ~/Downloads/db_dump/dev0_api_onboarding_invitations
+
+  mongoimport -d api_queries -c queries < ~/Downloads/db_dump/dev0_api_queries_queries
+
+  mongoimport -d api_skynet -c artifacts < ~/Downloads/db_dump/dev0_api_skynet_artifacts
+  mongoimport -d api_skynet -c training_examples < ~/Downloads/db_dump/dev0_api_skynet_training_examples
+
+  mongoimport -d api_solutions -c solutions < ~/Downloads/db_dump/dev0_api_solutions_solutions
+
+  mongoimport -d sauron -c tasks < ~/Downloads/db_dump/dev0_sauron_tasks
+  mongoimport -d sauron -c jobs < ~/Downloads/db_dump/dev0_sauron_jobs
+  mongoimport -d sauron -c flows < ~/Downloads/db_dump/dev0_sauron_flows
+  mongoimport -d sauron -c flow_triggers < ~/Downloads/db_dump/dev0_sauron_flow_triggers
+}
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/anoop/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/anoop/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/anoop/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/anoop/google-cloud-sdk/completion.zsh.inc'; fi

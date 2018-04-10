@@ -1,3 +1,8 @@
+# SSH aliases
+
+alias kill-all-ssh="ps -ef | grep 'ssh' | grep -v 'grep' | awk '{print $2}' | xargs kill -9"
+alias ssh="ssh -o 'StrictHostKeyChecking no'"
+
 # Git Aliases
 
 alias gpom="git push -u origin master"
@@ -16,7 +21,7 @@ alias gk='gitk'
 alias st='stree'
 alias gg='git gui'
 alias gl="git log --oneline -10"
-alias glcid="git log --oneline -1 | awk '{print $1}' | xcopy"
+alias glcid="git log --oneline -1 | awk -F '' '{print $1}' | pbcopy"
 alias gl6="git log --oneline -5"
 alias gl3="git log --oneline -3"
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative | less -R"
@@ -100,4 +105,8 @@ alias jobsp='cronjob_psql;repeatjob_psql'
 alias matlab="~/Softwares/MATLAB/bin/matlab"
 
 #File exlporer shortcut
-alias e="dolphin . 2>&1 >/dev/null &"
+#alias e="dolphin . 2>&1 >/dev/null &"
+
+#Emacs alias
+#alias e="/usr/local/Cellar/emacs/25.2/bin/emacsclient -c"
+alias emacs="emacsclient -c"
