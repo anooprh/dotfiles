@@ -60,7 +60,7 @@ export PATH=$PATH:"${SCSDK_HOME}scripts/unix"
 export PATH=$PATH:"${SCSDK_HOME}workers/dependencies/third_party/apache-maven-3.0/bin"
 
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 alias ts='date -u +%Y%m%d%H%M%S'
 alias dus='sudo du -s * | sort -rn | head'
 alias mytop='top -s1 -o cpu -R -F'
