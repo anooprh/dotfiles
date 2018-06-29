@@ -110,3 +110,4 @@ alias matlab="~/Softwares/MATLAB/bin/matlab"
 #Emacs alias
 #alias e="/usr/local/Cellar/emacs/25.2/bin/emacsclient -c"
 alias emacs="emacsclient -c"
+alias kcs="kubectl"
